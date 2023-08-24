@@ -7,40 +7,10 @@
     <title>Note Book</title>
 
     <!--================ style ==================-->
-    <link rel="stylesheet" href="../srs/css/common.css">
-    <link rel="stylesheet" href="../srs/css/contact.css">
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/contact.css">
     
 </head>
-
-<!-- <script>
-    function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script> -->
 
 <body>
     <!-- =============== Navigation ================ -->
@@ -57,7 +27,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="../pages/planintro.html">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -66,7 +36,7 @@
                 </li>
 
                 <li>
-                    <a href="../pages/note.html">
+                    <a href="../pages/comnote.html">
                         <span class="icon">
                             <ion-icon name="clipboard-outline"></ion-icon>
                         </span>
@@ -75,16 +45,16 @@
                 </li>
 
                 <li>
-                    <a href="../pages/contact.html">
+                    <a href="../pages/comcontact.html">
                         <span class="icon">
                             <ion-icon name="call-outline"></ion-icon>
                         </span>
                         <span class="title">Contact</span>
                     </a>
                 </li>
-                
+
                 <li>
-                    <a href="../pages/setting.html">
+                    <a href="../pages/comsetting.html">
                         <span class="icon">
                             <ion-icon name="settings-outline"></ion-icon>
                         </span>
@@ -93,7 +63,7 @@
                 </li>
                 
                 <li>
-                    <a href="../pages/signout.html">
+                    <a href="../pages/comsignout.html">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>
@@ -110,14 +80,7 @@
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
 
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Search here">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
-                </div>
-
-                <a href="../pages/user.html">
+                <a href="../pages/comuser.html">
                 <div class="user">
                     <!-- <input type="text"  placeholder="Account"> -->
                     <img src="../src/img/me.jpg" alt="">
@@ -133,7 +96,7 @@
             <div>
               <h3 class="i-name">contact</h3>
 
-              <a href="../pages/navigation.html">
+              <a href="../pages/planintro.html">
                 <div class="close-sign"></div>
               </a>
 
@@ -186,8 +149,8 @@
     </div>
 
     <!-- =========== Scripts =========  -->
-    <script src="../scripts/common.js"></script>
-    <script src="../scripts/contact.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/contact.js"></script>
     
 
     <!-- ====== ionicons ======= -->
