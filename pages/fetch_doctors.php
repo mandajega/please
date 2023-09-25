@@ -118,11 +118,11 @@ $conn->close();
 
             <div class="scroll-container">
             <a href="../pages/proviplan.html">
-        <div class="back-card">
+          <div class="back-card">
             <div>
                 <button class="back-button">Back</button>
             </div>
-        </div>
+          </div>
         </a>
 
 
