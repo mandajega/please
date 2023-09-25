@@ -109,50 +109,52 @@
                 </div>
             </div>    
 
-                            <!-- ================ Order Details List ================= -->
-                            <form action="save_note.php" method="POST">
-                            <div class="row">
-                <div class="leftcolumn">
+                                         <!-- ================ Order Details List ================= -->
+            <form action="save_note.php" method="POST">
+                <div class="row">
+    <div class="leftcolumn">
+        
+        <div class="wrapper">
+            <!-- partial:index.partial.html -->
+            <div id="app">
+                <div class="container">
                     
-                    <div class="wrapper">
-                        <!-- partial:index.partial.html -->
-                        <div id="app">
-                            <div class="container">
-                                 <Calendar id="calendar" />
-                            </div>
-                        </div>
-                        <input type="hidden" id="selectedDate" name="selectedDate">
-                    
-                    </div>
-
                 </div>
-
-                <div class="rightcolumn">
-                    <div class="card">
-                        <h2>Diary Notes :</h2>
-
-                    <div class="sug">
-                        <input type="text" name="note">
-                    </div>
-                    
-                  </div>
-
-                </div>
-
-                <div>
-                    <button class="submit-button" type="submit">Submit</button>
-                </div>
-
-                <div>
-                    <button class="view-button" type="submit">View your log</button>
-                </div>
-
             </div>
 
-                
-                
-            </div>
-        </form>
+            <input type="date" id="date" name="date" style="font-size: 20px;" required>
+        
+        </div>
+
+    </div>
+
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>Diary Notes :</h2>
+
+        <div class="sug">
+            
+            <input type="text" name="note">
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div>
+        <button class="submit-button" type="submit">Submit</button>
+    </div>
+
+    <div>
+        <button class="view-button" type="submit">view you log</button>
+    </div>
+
+</div>
+
+    
+    
+</div>
+</form>
             
 
             <!-- ================ Input & Output Details List ================= -->
