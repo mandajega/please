@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Note Book</title>
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Google+Sans:300,400,500'><link rel="stylesheet" href="../src/css/calenstyle.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Google+Sans:300,400,500'><link rel="stylesheet" href="../srs/css/calenstyle.css">
 
 
     <!--================ style ==================-->
@@ -30,7 +30,7 @@
                 </li>
 
                 <li>
-                    <a href="../pages/planintro.html">
+                    <a href="../pages/firstpage.html">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -55,7 +55,7 @@
                         <span class="title">Contact</span>
                     </a>
                 </li>
-
+                
                 <li>
                     <a href="../pages/comsetting.html">
                         <span class="icon">
@@ -107,54 +107,66 @@
                     <button class="tsk">Task List</button>
                     </a>
                 </div>
-            </div>    
+            </div> 
+            
+            <div>
+                
+                <a href="notelog.php">
+                <button class="view-button">View your log</button>
+            </a>
+                
 
-                                         <!-- ================ Order Details List ================= -->
+            </div>
+<br><br>
+                            <!-- ================ Order Details List ================= -->
             <form action="save_note.php" method="POST">
-                <div class="row">
-    <div class="leftcolumn">
-        
-        <div class="wrapper">
-            <!-- partial:index.partial.html -->
-            <div id="app">
-                <div class="container">
+                            <div class="row">
+                <div class="leftcolumn">
                     
+                    <div class="wrapper">
+                        <!-- partial:index.partial.html -->
+                        <div id="app">
+                            <div class="container">
+                                
+                            </div>
+                        </div>
+
+                        <input type="date" id="date" name="date" style="font-size: 20px;" >
+                    
+                    </div>
+
                 </div>
+
+                <div class="rightcolumn">
+                    <div class="card">
+                        <h2>Diary Notes :</h2>
+
+                    <div class="sug">
+                        
+                        <input type="text" name="note">
+                    </div>
+                    
+                  </div>
+
+                </div>
+
+                <div>
+                    <button class="submit-button" type="submit">Submit</button>
+                </div>
+            </form>
+
+            
+                
+
             </div>
 
-            <input type="date" id="date" name="date" style="font-size: 20px;" required>
-        
-        </div>
+                
+                
+            </div>
 
-    </div>
-
-    <div class="rightcolumn">
-        <div class="card">
-            <h2>Diary Notes :</h2>
-
-        <div class="sug">
+           
             
-            <input type="text" name="note">
-        </div>
         
-      </div>
-
-    </div>
-
-    <div>
-        <button class="submit-button" type="submit">Submit</button>
-    </div>
-
-    <div>
-        <button class="view-button" type="submit">view you log</button>
-    </div>
-
-</div>
-
-    
-    
-</div>
-</form>
             
 
             <!-- ================ Input & Output Details List ================= -->
@@ -164,12 +176,12 @@
 
     <!-- =========== Scripts =========  -->
     <script src="../script/common.js"></script>
-    <script src="../script/script.js"></script>
+    
    
      <!-- ====== ionicons ======= -->
      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js'></script><script  src="../script/calen.js"></script>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js'></script><script  src="../scripts/calen.js"></script>
  
 
     <!-- ====== ionicons ======= -->

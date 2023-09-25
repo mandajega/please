@@ -1,16 +1,48 @@
+<?php
+
+session_start();
+// Connect to the database
+$db_host = 'localhost';
+$db_user = 'root';
+$db_pass = '';
+$db_name = 'momandme';
+
+$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$user_id = $_SESSION['user_id'];
+
+    // Query to retrieve doctors based on the selected speciality
+    $query = "SELECT date, title FROM eventtable WHERE user_id = '$user_id'";
+    $result = $conn->query($query);
+
+    // Check if the query executed successfully
+    if (!$result) {
+        die("Query failed: " . $conn->error);
+    }
+
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>settings</title>
+    <title>Navigation Bar</title>
 
     <!--================ style ==================-->
-    <link rel="stylesheet" href="../src/css/setting.css">
-    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/sleeplog.css">
+    <style>
+    th, td {
+        padding: 5px; /* Adjust this value to increase or decrease the space */
+    }
+</style>
 </head>
-
 <body>
     <!-- =============== Navigation ================ -->
     <div class="container">
@@ -19,14 +51,14 @@
                 <li>
                     <a href="#">
                         <span class="icon">
-                            <img src="" alt="logo">
+                            <img src="mom&me.jpg" alt="logo">
                         </span>
                         <span class="title1"><h1>Mom & Me</h1></span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="../pages/planintro.html">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -35,7 +67,7 @@
                 </li>
 
                 <li>
-                    <a href="../pages/comnote.html">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="clipboard-outline"></ion-icon>
                         </span>
@@ -44,7 +76,7 @@
                 </li>
 
                 <li>
-                    <a href="../pages/comcontact.html">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="call-outline"></ion-icon>
                         </span>
@@ -53,7 +85,7 @@
                 </li>
 
                 <li>
-                    <a href="../pages/comsetting.html">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="settings-outline"></ion-icon>
                         </span>
@@ -62,14 +94,13 @@
                 </li>
                 
                 <li>
-                    <a href="../pages/comsignout.html">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>
                         <span class="title">Sign Out</span>
                     </a>
                 </li>
-                
             </ul>
         </div>
 
@@ -80,99 +111,67 @@
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
 
-                
-
-                <a href="../pages/comuser.html">
                 <div class="user">
                     <!-- <input type="text"  placeholder="Account"> -->
-                    <img src="../src/img/me.jpg" alt="">
+                    <img src="asq.jpg" alt="">
                     <div>
-                        <h4>Dineshka.KS</h4>
+                        <h4>Ashfaq mjaa</h4>
                         <small>Super admin</small>
                     </div>
                 </div>
-                </a>
             </div>
 
             <div class="scroll-container">
-              <h3 class="i-name"><u>Settings</u></h3>
-
-              <div class="container1">
-
-                <div class="row">
-                  <h3 class="heading">Switch User <span class="arrow">▼</span></h3>
-                  <div class="content">
-
-
-                     <a href="planintro.html">
-                    <button class="button">Planning for pregnancy</button><br><br>
-                     </a>
-
-                    <button class="button">Current Pregnancy </button><br><br>
-
-                    <button class="button">Post Partum Mother</button><br><br>
-
-
-                  </div>
-                </div>
-
-                <div class="row">
-                  <h3 class="heading">Help ? <span class="arrow">▼</span></h3>
-                  <div class="content">
-                  
-                  <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Contact Number</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Amanda Jeganathan</td>
-                            <td>0767821170</td>
-                        </tr>
-                        <tr>
-                            <td>Ashfaq Ahamed</td>
-                            <td>0763873164</td>
-                        </tr>
-                        <tr>
-                            <td>Thabeehsa Nicholas</td>
-                            <td>0776873035</td>
-                        </tr>
-                        <tr>
-                            <td>Maheshika Rashanjali</td>
-                            <td>0757109000</td>
-                        </tr>
-                        <tr>
-                            <td>Dineshka Kulendran</td>
-                            <td>0779291801</td>
-                        </tr>
-                    </tbody>
-                </table>
-                </div>
-
-                </div>
+            <a href="../pages/comnote.html">
+          <div class="back-card">
+            <div>
                 
-             
-              
-              
-
+                <button class="back-button">Back</button>
             </div>
+          </div>
+        </a>
 
+
+            <center>
+
+            <div class="rightcolumn">
+
+                <div class="card">
+                  <div class="wd">
+                      
+                  </div>
+
+                  <div class="sug">
+                    <h2>Your Calendar Notes</h2><br>
+                     <ul id="log" style="font-size: 18px;"></ul>
+
+                        <div id="average" style="font-size: 16px;"></div>
+                        <table>
+                        <tr>
+                <th>Date</th>
+                <th>Notes</th>
+                
+                
+            </tr>
+            <?php while ($row = $result->fetch_assoc()) : ?>
+                <tr>
+                    <td><?php echo $row['date']; ?></td>
+                    <td><?php echo $row['title']; ?></td>
+                    
+                    
+                </tr>
+            <?php endwhile; ?>
+        </table>
+    </div>
+          </div>
+              </div>
+              </center>
+              </div>
+            </div>
             
 
-        </div>
-        </div>
-
-    
-    </div> 
-
     <!-- =========== Scripts =========  -->
-    <script src="../script/setting.js"></script>
-    <script src="../script/common.js"></script>
-    <script src="../script/includehtml.js"></script>
-    <script>includeHTML();</script>
+    <script src="navigation.js"></script>
 
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
