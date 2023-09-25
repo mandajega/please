@@ -126,6 +126,7 @@ $conn->close();
                 </div>
             </div>
 
+            <div class="scroll-container">
             <a href="../pages/proviplan.html">
         <div class="back-card">
             <div>
@@ -133,6 +134,7 @@ $conn->close();
             </div>
         </div>
         </a>
+
 
             <center>
 
@@ -165,13 +167,12 @@ $conn->close();
             <?php endwhile; ?>
         </table>
     </div>
-
           </div>
-
               </div>
-
+              </center>
+              </div>
             </div>
-            </center>
+            
 
     <!-- =========== Scripts =========  -->
     <script src="navigation.js"></script>
