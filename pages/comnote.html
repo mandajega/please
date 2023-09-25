@@ -110,16 +110,18 @@
             </div>    
 
                             <!-- ================ Order Details List ================= -->
-            <div class="row">
+                            <form action="save_note.php" method="POST">
+                            <div class="row">
                 <div class="leftcolumn">
                     
                     <div class="wrapper">
                         <!-- partial:index.partial.html -->
                         <div id="app">
                             <div class="container">
-                                 <Calendar />
+                                 <Calendar id="calendar" />
                             </div>
                         </div>
+                        <input type="hidden" id="selectedDate" name="selectedDate">
                     
                     </div>
 
@@ -130,7 +132,7 @@
                         <h2>Diary Notes :</h2>
 
                     <div class="sug">
-                        <input type="text" name="fname">
+                        <input type="text" name="note">
                     </div>
                     
                   </div>
@@ -150,6 +152,7 @@
                 
                 
             </div>
+        </form>
             
 
             <!-- ================ Input & Output Details List ================= -->
