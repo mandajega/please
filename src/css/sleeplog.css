@@ -351,6 +351,11 @@ body {
   background-color: #dedede;
 }
 
+.scroll-container {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
 
 /* ====================== Responsive Design ========================== */
 @media (max-width: 991px) {
