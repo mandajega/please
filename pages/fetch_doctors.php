@@ -79,9 +79,6 @@ $conn->close();
                     </a>
                 </li>
 
-               
-
-
                 <li>
                     <a href="#">
                         <span class="icon">
@@ -109,13 +106,6 @@ $conn->close();
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
 
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Search here">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
-                </div>
-
                 <div class="user">
                     <!-- <input type="text"  placeholder="Account"> -->
                     <img src="asq.jpg" alt="">
@@ -126,13 +116,15 @@ $conn->close();
                 </div>
             </div>
 
+            <div class="scroll-container">
             <a href="../pages/proviplan.html">
-        <div class="back-card">
+          <div class="back-card">
             <div>
                 <button class="back-button">Back</button>
             </div>
-        </div>
+          </div>
         </a>
+
 
             <center>
 
@@ -165,13 +157,12 @@ $conn->close();
             <?php endwhile; ?>
         </table>
     </div>
-
           </div>
-
               </div>
-
+              </center>
+              </div>
             </div>
-            </center>
+            
 
     <!-- =========== Scripts =========  -->
     <script src="navigation.js"></script>
