@@ -59,9 +59,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($category === "Plan") {
                 header("Location: planqs.html");
             } elseif ($category === "Current") {
-                header("Location: questionset.html");
+                header("Location: http://localhost/FINAL/current/pages/questionset.html");
             } elseif ($category === "Post") {
-                header("Location: ppmqs.html");
+                header("Location: http://localhost/FINAL/mom%20and%20baby/ppb/pages/ppmqs.html");
             }
             exit();  
 
